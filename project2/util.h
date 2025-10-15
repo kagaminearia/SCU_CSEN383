@@ -12,5 +12,12 @@ int compare_by_priority(const void* a, const void* b);
 int compare_by_remaining_time(const void* a, const void* b);
 
 void print_process(const Process *p);
+void print_process_to_file(const Process *p, FILE *fp);
+
+void reset_processes(Process* processes, int process_count);
+void compute_and_print_statistics(Process *processes, int process_count);
+void compute_and_print_statistics_to_file(Process *processes, int process_count, FILE *fp);
 
 #endif // UTIL_H
+
+void compute_hpf_statistics_to_file(Process *processes, int process_count, FILE *fp);

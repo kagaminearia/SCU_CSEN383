@@ -8,13 +8,14 @@
 
 // Process struct definition
 typedef struct Process {
-  char name[4];
-  double arrival_time;
-  double burst_time;
-  double remaining_time;
+  char name[5];
+  int arrival_time;
+  int burst_time;
+  int remaining_time;
   int priority;
-  double start_time;
-  double completion_time;
+  int original_priority;
+  int start_time;
+  int completion_time;
   bool is_completed;
 } Process;
 

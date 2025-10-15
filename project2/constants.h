@@ -1,8 +1,8 @@
 #pragma once
 
-#define MAX_ARRIVIAL_TIME 99.0
-#define MIN_BURST_TIME 0.1
-#define MAX_BURST_TIME 10.0
+#define MAX_ARRIVIAL_TIME 99
+#define MIN_BURST_TIME 1
+#define MAX_BURST_TIME 10
 #define MIN_PRIORITY 4
 #define MAX_PRIORITY 1
 

@@ -1,4 +1,10 @@
 #include "simulation.h"
+#include "hpf.h"
+#include "srt.h"
+#include "rr.h"
+#include "sjf.h"
+#include "fcfs.h"
+#include "util.h"
 
 void generate_name(int idx, char *name, int name_size) {
   // Calculate the maximum index based on the name size just in case
@@ -12,15 +18,15 @@ void generate_name(int idx, char *name, int name_size) {
   }
 
   // Generate the actual name
-  snprintf(name, name_size, "P%0*d", NAME_LENGTH - 2, idx);
+  snprintf(name, name_size, "P%d", idx);
 }
 
-double generate_arrival_time(void) {
-  return (double)rand() / (double)RAND_MAX * MAX_ARRIVIAL_TIME;
+int generate_arrival_time(void) {
+  return rand() % (MAX_ARRIVIAL_TIME + 1);
 }
 
-double generate_burst_time(void) {
-  return (double)rand() / (double)RAND_MAX * (MAX_BURST_TIME - MIN_BURST_TIME) + MIN_BURST_TIME;
+int generate_burst_time(void) {
+  return rand() % (MAX_BURST_TIME - MIN_BURST_TIME + 1) + MIN_BURST_TIME;
 }
 
 int generate_priority(void) {
@@ -35,8 +41,6 @@ Process* generate_processes(void) {
     exit(EXIT_FAILURE);
   }
 
-  srand(time(NULL));
-
   // Generate processes
   for (int i = 0; i < PROCESS_COUNT; i++) {
     generate_name(i, processes[i].name, NAME_LENGTH);
@@ -44,10 +48,11 @@ Process* generate_processes(void) {
     processes[i].burst_time = generate_burst_time();
     processes[i].remaining_time = processes[i].burst_time;
     processes[i].priority = generate_priority();
+    processes[i].original_priority = processes[i].priority;
 
     // Set explicit default values for start_time and completion_time
-    processes[i].start_time = -1.0;
-    processes[i].completion_time = -1.0;
+    processes[i].start_time = -1;
+    processes[i].completion_time = -1;
 
     processes[i].is_completed = false;
   }
@@ -57,14 +62,42 @@ Process* generate_processes(void) {
 
 #ifdef SIMULATION
 int main() {
-  Process* processes = generate_processes();
-  srt(&processes);
+    // Generate random processes
+    Process* processes;
+    char output_filename[20];
 
-  for (int i = 0; i < PROCESS_COUNT; i++) {
-    print_process(&processes[i]);
-  }
+    srand(time(NULL));
+    for (int i = 1; i <= 5; i++) {
+        processes = generate_processes();
+        snprintf(output_filename, sizeof(output_filename), "output%d.txt", i);
 
-  free(processes);
-  return 0;
+        // Clear the file at the beginning of each simulation run
+        FILE *fp = fopen(output_filename, "w");
+        if (fp) {
+            fclose(fp);
+        }
+
+        fcfs(&processes, output_filename);
+        reset_processes(processes, PROCESS_COUNT);
+        sjf(&processes, output_filename);
+        reset_processes(processes, PROCESS_COUNT);
+        srt(&processes, output_filename);
+        reset_processes(processes, PROCESS_COUNT);
+        rr(&processes, output_filename);
+        reset_processes(processes, PROCESS_COUNT);
+        hpf_np(&processes, output_filename);
+        reset_processes(processes, PROCESS_COUNT);
+        hpf_p(&processes, output_filename);
+        reset_processes(processes, PROCESS_COUNT);
+        
+        
+
+        if (i < 5) {
+            reset_processes(processes, PROCESS_COUNT);
+        }
+        free(processes);
+    }
+
+    return 0;
 }
 #endif  // SIMULATION

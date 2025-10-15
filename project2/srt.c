@@ -1,12 +1,18 @@
 // Shortest reaemining time
 
-#include "schedulers.h"
+#include "srt.h"
 
-int srt(Process** process_ptr) {
+int srt(Process** process_ptr, const char* output_filename) {
   Process* processes = *process_ptr;
 
   // Sort processes by arrival time
   qsort(processes, PROCESS_COUNT, sizeof(Process), compare_by_arrival_time);
+
+  FILE *output_file = fopen(output_filename, "a");
+  if (output_file == NULL) {
+      perror("Error opening output file");
+      return 1;
+  }
 
   int current_time = START_TIME;
   bool completed = false;
@@ -16,12 +22,12 @@ int srt(Process** process_ptr) {
   int process_started = 0;
 
   // Print the results
-  fprintf(stdout, "SRT\n******************\nSimulated processes BEFORE execution:\n");
+  fprintf(output_file, "SRT\n******************\nSimulated processes BEFORE execution:\n");
   for (int i = 0; i < PROCESS_COUNT; i++) {
-    print_process(&processes[i]);
+    print_process_to_file(&processes[i], output_file);
   }
 
-  fprintf(stdout, "\n******************\nTime chart:\n");
+  fprintf(output_file, "\n******************\nTime chart:\n");
 
   while (!completed) {
     // Create a temporary array to hold the processes that have arrived and are not completed
@@ -70,7 +76,7 @@ int srt(Process** process_ptr) {
     }
     shortest_job->remaining_time -= TIME_QUANTUM;
     current_time += TIME_QUANTUM;
-    fprintf(stdout, "%s ", shortest_job->name);
+    fprintf(output_file, "%s ", shortest_job->name);
 
     // If the process is completed, update its completion time and mark it as completed
     if (shortest_job->remaining_time <= 0.0) {
@@ -93,10 +99,14 @@ int srt(Process** process_ptr) {
   }
 
   // Print the results after execution
-  fprintf(stdout, "\n******************\nSimulated processes AFTER execution:\n");
+  fprintf(output_file, "\n******************\nSimulated processes AFTER execution:\n");
   for (int i = 0; i < PROCESS_COUNT; i++) {
-    print_process(&processes[i]);
+    print_process_to_file(&processes[i], output_file);
   }
+
+  // Print statistics for SRT
+  compute_and_print_statistics_to_file(processes, PROCESS_COUNT, output_file);
+  fclose(output_file);
 
   return 0;
 }

@@ -1,0 +1,750 @@
+FCFS Scheduling
+******************
+Simulated processes BEFORE execution:
+Name: P32, Arrival Time: 0, Burst Time: 10, Remaining Time: 10, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P10, Arrival Time: 10, Burst Time: 2, Remaining Time: 2, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P34, Arrival Time: 12, Burst Time: 4, Remaining Time: 4, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P18, Arrival Time: 17, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P1, Arrival Time: 17, Burst Time: 3, Remaining Time: 3, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P23, Arrival Time: 20, Burst Time: 1, Remaining Time: 1, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P35, Arrival Time: 21, Burst Time: 8, Remaining Time: 8, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P6, Arrival Time: 22, Burst Time: 4, Remaining Time: 4, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P36, Arrival Time: 25, Burst Time: 5, Remaining Time: 5, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P44, Arrival Time: 27, Burst Time: 7, Remaining Time: 7, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P27, Arrival Time: 28, Burst Time: 10, Remaining Time: 10, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P41, Arrival Time: 28, Burst Time: 4, Remaining Time: 4, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P12, Arrival Time: 28, Burst Time: 10, Remaining Time: 10, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P28, Arrival Time: 30, Burst Time: 10, Remaining Time: 10, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P26, Arrival Time: 31, Burst Time: 8, Remaining Time: 8, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P13, Arrival Time: 33, Burst Time: 4, Remaining Time: 4, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P7, Arrival Time: 33, Burst Time: 2, Remaining Time: 2, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P21, Arrival Time: 36, Burst Time: 4, Remaining Time: 4, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P45, Arrival Time: 40, Burst Time: 1, Remaining Time: 1, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P42, Arrival Time: 41, Burst Time: 5, Remaining Time: 5, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P11, Arrival Time: 41, Burst Time: 1, Remaining Time: 1, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P22, Arrival Time: 43, Burst Time: 10, Remaining Time: 10, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P17, Arrival Time: 46, Burst Time: 6, Remaining Time: 6, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P48, Arrival Time: 46, Burst Time: 6, Remaining Time: 6, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P20, Arrival Time: 47, Burst Time: 9, Remaining Time: 9, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P15, Arrival Time: 48, Burst Time: 3, Remaining Time: 3, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P19, Arrival Time: 48, Burst Time: 3, Remaining Time: 3, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P33, Arrival Time: 55, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P31, Arrival Time: 56, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P49, Arrival Time: 56, Burst Time: 10, Remaining Time: 10, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P30, Arrival Time: 57, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P8, Arrival Time: 59, Burst Time: 4, Remaining Time: 4, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P38, Arrival Time: 62, Burst Time: 6, Remaining Time: 6, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P0, Arrival Time: 66, Burst Time: 10, Remaining Time: 10, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P39, Arrival Time: 70, Burst Time: 8, Remaining Time: 8, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P2, Arrival Time: 71, Burst Time: 6, Remaining Time: 6, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P16, Arrival Time: 79, Burst Time: 3, Remaining Time: 3, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P43, Arrival Time: 81, Burst Time: 10, Remaining Time: 10, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P37, Arrival Time: 82, Burst Time: 7, Remaining Time: 7, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P46, Arrival Time: 82, Burst Time: 7, Remaining Time: 7, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P3, Arrival Time: 84, Burst Time: 1, Remaining Time: 1, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P47, Arrival Time: 85, Burst Time: 5, Remaining Time: 5, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P29, Arrival Time: 87, Burst Time: 1, Remaining Time: 1, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P14, Arrival Time: 90, Burst Time: 9, Remaining Time: 9, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P24, Arrival Time: 90, Burst Time: 6, Remaining Time: 6, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P5, Arrival Time: 91, Burst Time: 7, Remaining Time: 7, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P4, Arrival Time: 95, Burst Time: 9, Remaining Time: 9, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P9, Arrival Time: 95, Burst Time: 8, Remaining Time: 8, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P25, Arrival Time: 98, Burst Time: 4, Remaining Time: 4, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P40, Arrival Time: 99, Burst Time: 8, Remaining Time: 8, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+
+******************
+Time chart:
+P32 P10 P34 P18 P1 P23 P35 P6 P36 P44 P27 P41 P12 P28 P26 P13 P7 
+
+******************
+Simulated processes AFTER execution:
+Name: P32, Arrival Time: 0, Burst Time: 10, Remaining Time: 0, Priority: 4, Start Time: 0, Completion Time: 10, Completed: true
+Name: P10, Arrival Time: 10, Burst Time: 2, Remaining Time: 0, Priority: 3, Start Time: 10, Completion Time: 12, Completed: true
+Name: P34, Arrival Time: 12, Burst Time: 4, Remaining Time: 0, Priority: 4, Start Time: 12, Completion Time: 16, Completed: true
+Name: P18, Arrival Time: 17, Burst Time: 6, Remaining Time: 0, Priority: 1, Start Time: 17, Completion Time: 23, Completed: true
+Name: P1, Arrival Time: 17, Burst Time: 3, Remaining Time: 0, Priority: 4, Start Time: 23, Completion Time: 26, Completed: true
+Name: P23, Arrival Time: 20, Burst Time: 1, Remaining Time: 0, Priority: 3, Start Time: 26, Completion Time: 27, Completed: true
+Name: P35, Arrival Time: 21, Burst Time: 8, Remaining Time: 0, Priority: 1, Start Time: 27, Completion Time: 35, Completed: true
+Name: P6, Arrival Time: 22, Burst Time: 4, Remaining Time: 0, Priority: 3, Start Time: 35, Completion Time: 39, Completed: true
+Name: P36, Arrival Time: 25, Burst Time: 5, Remaining Time: 0, Priority: 1, Start Time: 39, Completion Time: 44, Completed: true
+Name: P44, Arrival Time: 27, Burst Time: 7, Remaining Time: 0, Priority: 2, Start Time: 44, Completion Time: 51, Completed: true
+Name: P27, Arrival Time: 28, Burst Time: 10, Remaining Time: 0, Priority: 2, Start Time: 51, Completion Time: 61, Completed: true
+Name: P41, Arrival Time: 28, Burst Time: 4, Remaining Time: 0, Priority: 4, Start Time: 61, Completion Time: 65, Completed: true
+Name: P12, Arrival Time: 28, Burst Time: 10, Remaining Time: 0, Priority: 1, Start Time: 65, Completion Time: 75, Completed: true
+Name: P28, Arrival Time: 30, Burst Time: 10, Remaining Time: 0, Priority: 2, Start Time: 75, Completion Time: 85, Completed: true
+Name: P26, Arrival Time: 31, Burst Time: 8, Remaining Time: 0, Priority: 2, Start Time: 85, Completion Time: 93, Completed: true
+Name: P13, Arrival Time: 33, Burst Time: 4, Remaining Time: 0, Priority: 2, Start Time: 93, Completion Time: 97, Completed: true
+Name: P7, Arrival Time: 33, Burst Time: 2, Remaining Time: 0, Priority: 2, Start Time: 97, Completion Time: 99, Completed: true
+Name: P21, Arrival Time: 36, Burst Time: 4, Remaining Time: 4, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P45, Arrival Time: 40, Burst Time: 1, Remaining Time: 1, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P42, Arrival Time: 41, Burst Time: 5, Remaining Time: 5, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P11, Arrival Time: 41, Burst Time: 1, Remaining Time: 1, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P22, Arrival Time: 43, Burst Time: 10, Remaining Time: 10, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P17, Arrival Time: 46, Burst Time: 6, Remaining Time: 6, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P48, Arrival Time: 46, Burst Time: 6, Remaining Time: 6, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P20, Arrival Time: 47, Burst Time: 9, Remaining Time: 9, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P15, Arrival Time: 48, Burst Time: 3, Remaining Time: 3, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P19, Arrival Time: 48, Burst Time: 3, Remaining Time: 3, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P33, Arrival Time: 55, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P31, Arrival Time: 56, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P49, Arrival Time: 56, Burst Time: 10, Remaining Time: 10, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P30, Arrival Time: 57, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P8, Arrival Time: 59, Burst Time: 4, Remaining Time: 4, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P38, Arrival Time: 62, Burst Time: 6, Remaining Time: 6, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P0, Arrival Time: 66, Burst Time: 10, Remaining Time: 10, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P39, Arrival Time: 70, Burst Time: 8, Remaining Time: 8, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P2, Arrival Time: 71, Burst Time: 6, Remaining Time: 6, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P16, Arrival Time: 79, Burst Time: 3, Remaining Time: 3, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P43, Arrival Time: 81, Burst Time: 10, Remaining Time: 10, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P37, Arrival Time: 82, Burst Time: 7, Remaining Time: 7, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P46, Arrival Time: 82, Burst Time: 7, Remaining Time: 7, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P3, Arrival Time: 84, Burst Time: 1, Remaining Time: 1, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P47, Arrival Time: 85, Burst Time: 5, Remaining Time: 5, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P29, Arrival Time: 87, Burst Time: 1, Remaining Time: 1, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P14, Arrival Time: 90, Burst Time: 9, Remaining Time: 9, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P24, Arrival Time: 90, Burst Time: 6, Remaining Time: 6, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P5, Arrival Time: 91, Burst Time: 7, Remaining Time: 7, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P4, Arrival Time: 95, Burst Time: 9, Remaining Time: 9, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P9, Arrival Time: 95, Burst Time: 8, Remaining Time: 8, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P25, Arrival Time: 98, Burst Time: 4, Remaining Time: 4, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P40, Arrival Time: 99, Burst Time: 8, Remaining Time: 8, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+
+=== Simulation Statistics ===
+Average Turnaround Time : 28.00
+Average Waiting Time    : 22.24
+Average Response Time   : 22.24
+Throughput              : 0.17 processes/unit time
+==============================
+SJF
+******************
+Simulated processes BEFORE execution:
+Name: P32, Arrival Time: 0, Burst Time: 10, Remaining Time: 10, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P10, Arrival Time: 10, Burst Time: 2, Remaining Time: 2, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P34, Arrival Time: 12, Burst Time: 4, Remaining Time: 4, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P18, Arrival Time: 17, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P1, Arrival Time: 17, Burst Time: 3, Remaining Time: 3, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P23, Arrival Time: 20, Burst Time: 1, Remaining Time: 1, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P35, Arrival Time: 21, Burst Time: 8, Remaining Time: 8, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P6, Arrival Time: 22, Burst Time: 4, Remaining Time: 4, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P36, Arrival Time: 25, Burst Time: 5, Remaining Time: 5, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P44, Arrival Time: 27, Burst Time: 7, Remaining Time: 7, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P12, Arrival Time: 28, Burst Time: 10, Remaining Time: 10, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P27, Arrival Time: 28, Burst Time: 10, Remaining Time: 10, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P41, Arrival Time: 28, Burst Time: 4, Remaining Time: 4, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P28, Arrival Time: 30, Burst Time: 10, Remaining Time: 10, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P26, Arrival Time: 31, Burst Time: 8, Remaining Time: 8, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P13, Arrival Time: 33, Burst Time: 4, Remaining Time: 4, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P7, Arrival Time: 33, Burst Time: 2, Remaining Time: 2, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P21, Arrival Time: 36, Burst Time: 4, Remaining Time: 4, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P45, Arrival Time: 40, Burst Time: 1, Remaining Time: 1, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P42, Arrival Time: 41, Burst Time: 5, Remaining Time: 5, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P11, Arrival Time: 41, Burst Time: 1, Remaining Time: 1, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P22, Arrival Time: 43, Burst Time: 10, Remaining Time: 10, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P17, Arrival Time: 46, Burst Time: 6, Remaining Time: 6, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P48, Arrival Time: 46, Burst Time: 6, Remaining Time: 6, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P20, Arrival Time: 47, Burst Time: 9, Remaining Time: 9, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P15, Arrival Time: 48, Burst Time: 3, Remaining Time: 3, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P19, Arrival Time: 48, Burst Time: 3, Remaining Time: 3, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P33, Arrival Time: 55, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P31, Arrival Time: 56, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P49, Arrival Time: 56, Burst Time: 10, Remaining Time: 10, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P30, Arrival Time: 57, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P8, Arrival Time: 59, Burst Time: 4, Remaining Time: 4, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P38, Arrival Time: 62, Burst Time: 6, Remaining Time: 6, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P0, Arrival Time: 66, Burst Time: 10, Remaining Time: 10, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P39, Arrival Time: 70, Burst Time: 8, Remaining Time: 8, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P2, Arrival Time: 71, Burst Time: 6, Remaining Time: 6, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P16, Arrival Time: 79, Burst Time: 3, Remaining Time: 3, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P43, Arrival Time: 81, Burst Time: 10, Remaining Time: 10, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P37, Arrival Time: 82, Burst Time: 7, Remaining Time: 7, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P46, Arrival Time: 82, Burst Time: 7, Remaining Time: 7, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P3, Arrival Time: 84, Burst Time: 1, Remaining Time: 1, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P47, Arrival Time: 85, Burst Time: 5, Remaining Time: 5, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P29, Arrival Time: 87, Burst Time: 1, Remaining Time: 1, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P14, Arrival Time: 90, Burst Time: 9, Remaining Time: 9, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P24, Arrival Time: 90, Burst Time: 6, Remaining Time: 6, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P5, Arrival Time: 91, Burst Time: 7, Remaining Time: 7, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P4, Arrival Time: 95, Burst Time: 9, Remaining Time: 9, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P9, Arrival Time: 95, Burst Time: 8, Remaining Time: 8, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P25, Arrival Time: 98, Burst Time: 4, Remaining Time: 4, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P40, Arrival Time: 99, Burst Time: 8, Remaining Time: 8, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+
+******************
+Time chart:
+P32 P10 P34 P18 P1 P23 P35 P7 P21 P11 P42 P20 P49 P6 P36 P44 P46 P29 P12 
+******************
+Simulated processes AFTER execution:
+Name: P32, Arrival Time: 0, Burst Time: 10, Remaining Time: 0, Priority: 4, Start Time: 0, Completion Time: 10, Completed: true
+Name: P10, Arrival Time: 10, Burst Time: 2, Remaining Time: 0, Priority: 3, Start Time: 10, Completion Time: 12, Completed: true
+Name: P34, Arrival Time: 12, Burst Time: 4, Remaining Time: 0, Priority: 4, Start Time: 12, Completion Time: 16, Completed: true
+Name: P18, Arrival Time: 17, Burst Time: 6, Remaining Time: 0, Priority: 1, Start Time: 17, Completion Time: 23, Completed: true
+Name: P1, Arrival Time: 17, Burst Time: 3, Remaining Time: 0, Priority: 4, Start Time: 23, Completion Time: 26, Completed: true
+Name: P23, Arrival Time: 20, Burst Time: 1, Remaining Time: 0, Priority: 3, Start Time: 26, Completion Time: 27, Completed: true
+Name: P35, Arrival Time: 21, Burst Time: 8, Remaining Time: 0, Priority: 1, Start Time: 27, Completion Time: 35, Completed: true
+Name: P6, Arrival Time: 22, Burst Time: 4, Remaining Time: 0, Priority: 3, Start Time: 66, Completion Time: 70, Completed: true
+Name: P36, Arrival Time: 25, Burst Time: 5, Remaining Time: 0, Priority: 1, Start Time: 70, Completion Time: 75, Completed: true
+Name: P44, Arrival Time: 27, Burst Time: 7, Remaining Time: 0, Priority: 2, Start Time: 75, Completion Time: 82, Completed: true
+Name: P12, Arrival Time: 28, Burst Time: 10, Remaining Time: 0, Priority: 1, Start Time: 90, Completion Time: 100, Completed: true
+Name: P27, Arrival Time: 28, Burst Time: 10, Remaining Time: 10, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P41, Arrival Time: 28, Burst Time: 4, Remaining Time: 4, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P28, Arrival Time: 30, Burst Time: 10, Remaining Time: 10, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P26, Arrival Time: 31, Burst Time: 8, Remaining Time: 8, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P13, Arrival Time: 33, Burst Time: 4, Remaining Time: 4, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P7, Arrival Time: 33, Burst Time: 2, Remaining Time: 0, Priority: 2, Start Time: 35, Completion Time: 37, Completed: true
+Name: P21, Arrival Time: 36, Burst Time: 4, Remaining Time: 0, Priority: 2, Start Time: 37, Completion Time: 41, Completed: true
+Name: P45, Arrival Time: 40, Burst Time: 1, Remaining Time: 1, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P42, Arrival Time: 41, Burst Time: 5, Remaining Time: 0, Priority: 3, Start Time: 42, Completion Time: 47, Completed: true
+Name: P11, Arrival Time: 41, Burst Time: 1, Remaining Time: 0, Priority: 4, Start Time: 41, Completion Time: 42, Completed: true
+Name: P22, Arrival Time: 43, Burst Time: 10, Remaining Time: 10, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P17, Arrival Time: 46, Burst Time: 6, Remaining Time: 6, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P48, Arrival Time: 46, Burst Time: 6, Remaining Time: 6, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P20, Arrival Time: 47, Burst Time: 9, Remaining Time: 0, Priority: 1, Start Time: 47, Completion Time: 56, Completed: true
+Name: P15, Arrival Time: 48, Burst Time: 3, Remaining Time: 3, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P19, Arrival Time: 48, Burst Time: 3, Remaining Time: 3, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P33, Arrival Time: 55, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P31, Arrival Time: 56, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P49, Arrival Time: 56, Burst Time: 10, Remaining Time: 0, Priority: 3, Start Time: 56, Completion Time: 66, Completed: true
+Name: P30, Arrival Time: 57, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P8, Arrival Time: 59, Burst Time: 4, Remaining Time: 4, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P38, Arrival Time: 62, Burst Time: 6, Remaining Time: 6, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P0, Arrival Time: 66, Burst Time: 10, Remaining Time: 10, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P39, Arrival Time: 70, Burst Time: 8, Remaining Time: 8, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P2, Arrival Time: 71, Burst Time: 6, Remaining Time: 6, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P16, Arrival Time: 79, Burst Time: 3, Remaining Time: 3, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P43, Arrival Time: 81, Burst Time: 10, Remaining Time: 10, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P37, Arrival Time: 82, Burst Time: 7, Remaining Time: 7, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P46, Arrival Time: 82, Burst Time: 7, Remaining Time: 0, Priority: 1, Start Time: 82, Completion Time: 89, Completed: true
+Name: P3, Arrival Time: 84, Burst Time: 1, Remaining Time: 1, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P47, Arrival Time: 85, Burst Time: 5, Remaining Time: 5, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P29, Arrival Time: 87, Burst Time: 1, Remaining Time: 0, Priority: 4, Start Time: 89, Completion Time: 90, Completed: true
+Name: P14, Arrival Time: 90, Burst Time: 9, Remaining Time: 9, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P24, Arrival Time: 90, Burst Time: 6, Remaining Time: 6, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P5, Arrival Time: 91, Burst Time: 7, Remaining Time: 7, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P4, Arrival Time: 95, Burst Time: 9, Remaining Time: 9, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P9, Arrival Time: 95, Burst Time: 8, Remaining Time: 8, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P25, Arrival Time: 98, Burst Time: 4, Remaining Time: 4, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P40, Arrival Time: 99, Burst Time: 8, Remaining Time: 8, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+
+=== Simulation Statistics ===
+Average Turnaround Time : 16.95
+Average Waiting Time    : 11.74
+Average Response Time   : 11.74
+Throughput              : 0.19 processes/unit time
+==============================
+SRT
+******************
+Simulated processes BEFORE execution:
+Name: P32, Arrival Time: 0, Burst Time: 10, Remaining Time: 10, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P10, Arrival Time: 10, Burst Time: 2, Remaining Time: 2, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P34, Arrival Time: 12, Burst Time: 4, Remaining Time: 4, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P18, Arrival Time: 17, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P1, Arrival Time: 17, Burst Time: 3, Remaining Time: 3, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P23, Arrival Time: 20, Burst Time: 1, Remaining Time: 1, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P35, Arrival Time: 21, Burst Time: 8, Remaining Time: 8, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P6, Arrival Time: 22, Burst Time: 4, Remaining Time: 4, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P36, Arrival Time: 25, Burst Time: 5, Remaining Time: 5, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P44, Arrival Time: 27, Burst Time: 7, Remaining Time: 7, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P41, Arrival Time: 28, Burst Time: 4, Remaining Time: 4, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P12, Arrival Time: 28, Burst Time: 10, Remaining Time: 10, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P27, Arrival Time: 28, Burst Time: 10, Remaining Time: 10, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P28, Arrival Time: 30, Burst Time: 10, Remaining Time: 10, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P26, Arrival Time: 31, Burst Time: 8, Remaining Time: 8, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P13, Arrival Time: 33, Burst Time: 4, Remaining Time: 4, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P7, Arrival Time: 33, Burst Time: 2, Remaining Time: 2, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P21, Arrival Time: 36, Burst Time: 4, Remaining Time: 4, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P45, Arrival Time: 40, Burst Time: 1, Remaining Time: 1, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P42, Arrival Time: 41, Burst Time: 5, Remaining Time: 5, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P11, Arrival Time: 41, Burst Time: 1, Remaining Time: 1, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P22, Arrival Time: 43, Burst Time: 10, Remaining Time: 10, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P17, Arrival Time: 46, Burst Time: 6, Remaining Time: 6, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P48, Arrival Time: 46, Burst Time: 6, Remaining Time: 6, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P20, Arrival Time: 47, Burst Time: 9, Remaining Time: 9, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P15, Arrival Time: 48, Burst Time: 3, Remaining Time: 3, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P19, Arrival Time: 48, Burst Time: 3, Remaining Time: 3, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P33, Arrival Time: 55, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P31, Arrival Time: 56, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P49, Arrival Time: 56, Burst Time: 10, Remaining Time: 10, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P30, Arrival Time: 57, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P8, Arrival Time: 59, Burst Time: 4, Remaining Time: 4, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P38, Arrival Time: 62, Burst Time: 6, Remaining Time: 6, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P0, Arrival Time: 66, Burst Time: 10, Remaining Time: 10, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P39, Arrival Time: 70, Burst Time: 8, Remaining Time: 8, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P2, Arrival Time: 71, Burst Time: 6, Remaining Time: 6, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P16, Arrival Time: 79, Burst Time: 3, Remaining Time: 3, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P43, Arrival Time: 81, Burst Time: 10, Remaining Time: 10, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P37, Arrival Time: 82, Burst Time: 7, Remaining Time: 7, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P46, Arrival Time: 82, Burst Time: 7, Remaining Time: 7, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P3, Arrival Time: 84, Burst Time: 1, Remaining Time: 1, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P47, Arrival Time: 85, Burst Time: 5, Remaining Time: 5, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P29, Arrival Time: 87, Burst Time: 1, Remaining Time: 1, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P14, Arrival Time: 90, Burst Time: 9, Remaining Time: 9, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P24, Arrival Time: 90, Burst Time: 6, Remaining Time: 6, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P5, Arrival Time: 91, Burst Time: 7, Remaining Time: 7, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P4, Arrival Time: 95, Burst Time: 9, Remaining Time: 9, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P9, Arrival Time: 95, Burst Time: 8, Remaining Time: 8, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P25, Arrival Time: 98, Burst Time: 4, Remaining Time: 4, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P40, Arrival Time: 99, Burst Time: 8, Remaining Time: 8, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+
+******************
+Time chart:
+P32 P32 P32 P32 P32 P32 P32 P32 P32 P32 P10 P10 P34 P34 P34 P34 P1 P1 P1 P23 P18 P6 P6 P6 P6 P18 P18 P18 P18 P18 P41 P41 P41 P41 P7 P7 P13 P13 P13 P13 P11 P45 P21 P21 P21 P21 P42 P15 P15 P15 P19 P19 P19 P42 P42 P42 P42 P36 P8 P8 P8 P8 P36 P36 P36 P36 P17 P17 P17 P17 P17 P17 P48 P48 P48 P48 P48 P48 P16 P16 P16 P31 P31 P3 P31 P31 P29 P31 P31 P47 P47 P47 P47 P47 P38 P38 P38 P38 P38 P38 
+******************
+Simulated processes AFTER execution:
+Name: P32, Arrival Time: 0, Burst Time: 10, Remaining Time: 0, Priority: 4, Start Time: 0, Completion Time: 10, Completed: true
+Name: P10, Arrival Time: 10, Burst Time: 2, Remaining Time: 0, Priority: 3, Start Time: 10, Completion Time: 12, Completed: true
+Name: P34, Arrival Time: 12, Burst Time: 4, Remaining Time: 0, Priority: 4, Start Time: 12, Completion Time: 16, Completed: true
+Name: P18, Arrival Time: 17, Burst Time: 6, Remaining Time: 0, Priority: 1, Start Time: 21, Completion Time: 31, Completed: true
+Name: P1, Arrival Time: 17, Burst Time: 3, Remaining Time: 0, Priority: 4, Start Time: 17, Completion Time: 20, Completed: true
+Name: P23, Arrival Time: 20, Burst Time: 1, Remaining Time: 0, Priority: 3, Start Time: 20, Completion Time: 21, Completed: true
+Name: P35, Arrival Time: 21, Burst Time: 8, Remaining Time: 8, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P6, Arrival Time: 22, Burst Time: 4, Remaining Time: 0, Priority: 3, Start Time: 22, Completion Time: 26, Completed: true
+Name: P36, Arrival Time: 25, Burst Time: 5, Remaining Time: 0, Priority: 1, Start Time: 58, Completion Time: 67, Completed: true
+Name: P44, Arrival Time: 27, Burst Time: 7, Remaining Time: 7, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P41, Arrival Time: 28, Burst Time: 4, Remaining Time: 0, Priority: 4, Start Time: 31, Completion Time: 35, Completed: true
+Name: P12, Arrival Time: 28, Burst Time: 10, Remaining Time: 10, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P27, Arrival Time: 28, Burst Time: 10, Remaining Time: 10, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P28, Arrival Time: 30, Burst Time: 10, Remaining Time: 10, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P26, Arrival Time: 31, Burst Time: 8, Remaining Time: 8, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P13, Arrival Time: 33, Burst Time: 4, Remaining Time: 0, Priority: 2, Start Time: 37, Completion Time: 41, Completed: true
+Name: P7, Arrival Time: 33, Burst Time: 2, Remaining Time: 0, Priority: 2, Start Time: 35, Completion Time: 37, Completed: true
+Name: P21, Arrival Time: 36, Burst Time: 4, Remaining Time: 0, Priority: 2, Start Time: 43, Completion Time: 47, Completed: true
+Name: P45, Arrival Time: 40, Burst Time: 1, Remaining Time: 0, Priority: 3, Start Time: 42, Completion Time: 43, Completed: true
+Name: P42, Arrival Time: 41, Burst Time: 5, Remaining Time: 0, Priority: 3, Start Time: 47, Completion Time: 58, Completed: true
+Name: P11, Arrival Time: 41, Burst Time: 1, Remaining Time: 0, Priority: 4, Start Time: 41, Completion Time: 42, Completed: true
+Name: P22, Arrival Time: 43, Burst Time: 10, Remaining Time: 10, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P17, Arrival Time: 46, Burst Time: 6, Remaining Time: 0, Priority: 3, Start Time: 67, Completion Time: 73, Completed: true
+Name: P48, Arrival Time: 46, Burst Time: 6, Remaining Time: 0, Priority: 2, Start Time: 73, Completion Time: 79, Completed: true
+Name: P20, Arrival Time: 47, Burst Time: 9, Remaining Time: 9, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P15, Arrival Time: 48, Burst Time: 3, Remaining Time: 0, Priority: 3, Start Time: 48, Completion Time: 51, Completed: true
+Name: P19, Arrival Time: 48, Burst Time: 3, Remaining Time: 0, Priority: 3, Start Time: 51, Completion Time: 54, Completed: true
+Name: P33, Arrival Time: 55, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P31, Arrival Time: 56, Burst Time: 6, Remaining Time: 0, Priority: 1, Start Time: 82, Completion Time: 90, Completed: true
+Name: P49, Arrival Time: 56, Burst Time: 10, Remaining Time: 10, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P30, Arrival Time: 57, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P8, Arrival Time: 59, Burst Time: 4, Remaining Time: 0, Priority: 1, Start Time: 59, Completion Time: 63, Completed: true
+Name: P38, Arrival Time: 62, Burst Time: 6, Remaining Time: 0, Priority: 2, Start Time: 95, Completion Time: 101, Completed: true
+Name: P0, Arrival Time: 66, Burst Time: 10, Remaining Time: 10, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P39, Arrival Time: 70, Burst Time: 8, Remaining Time: 8, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P2, Arrival Time: 71, Burst Time: 6, Remaining Time: 6, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P16, Arrival Time: 79, Burst Time: 3, Remaining Time: 0, Priority: 2, Start Time: 79, Completion Time: 82, Completed: true
+Name: P43, Arrival Time: 81, Burst Time: 10, Remaining Time: 10, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P37, Arrival Time: 82, Burst Time: 7, Remaining Time: 7, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P46, Arrival Time: 82, Burst Time: 7, Remaining Time: 7, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P3, Arrival Time: 84, Burst Time: 1, Remaining Time: 0, Priority: 3, Start Time: 84, Completion Time: 85, Completed: true
+Name: P47, Arrival Time: 85, Burst Time: 5, Remaining Time: 0, Priority: 2, Start Time: 90, Completion Time: 95, Completed: true
+Name: P29, Arrival Time: 87, Burst Time: 1, Remaining Time: 0, Priority: 4, Start Time: 87, Completion Time: 88, Completed: true
+Name: P14, Arrival Time: 90, Burst Time: 9, Remaining Time: 9, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P24, Arrival Time: 90, Burst Time: 6, Remaining Time: 6, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P5, Arrival Time: 91, Burst Time: 7, Remaining Time: 7, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P4, Arrival Time: 95, Burst Time: 9, Remaining Time: 9, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P9, Arrival Time: 95, Burst Time: 8, Remaining Time: 8, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P25, Arrival Time: 98, Burst Time: 4, Remaining Time: 4, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P40, Arrival Time: 99, Burst Time: 8, Remaining Time: 8, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+
+=== Simulation Statistics ===
+Average Turnaround Time : 11.23
+Average Waiting Time    : 7.38
+Average Response Time   : 6.77
+Throughput              : 0.26 processes/unit time
+==============================
+RR Scheduling
+******************
+Simulated processes BEFORE execution:
+Name: P32, Arrival Time: 0, Burst Time: 10, Remaining Time: 10, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P10, Arrival Time: 10, Burst Time: 2, Remaining Time: 2, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P34, Arrival Time: 12, Burst Time: 4, Remaining Time: 4, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P18, Arrival Time: 17, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P1, Arrival Time: 17, Burst Time: 3, Remaining Time: 3, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P23, Arrival Time: 20, Burst Time: 1, Remaining Time: 1, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P35, Arrival Time: 21, Burst Time: 8, Remaining Time: 8, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P6, Arrival Time: 22, Burst Time: 4, Remaining Time: 4, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P36, Arrival Time: 25, Burst Time: 5, Remaining Time: 5, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P44, Arrival Time: 27, Burst Time: 7, Remaining Time: 7, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P27, Arrival Time: 28, Burst Time: 10, Remaining Time: 10, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P41, Arrival Time: 28, Burst Time: 4, Remaining Time: 4, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P12, Arrival Time: 28, Burst Time: 10, Remaining Time: 10, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P28, Arrival Time: 30, Burst Time: 10, Remaining Time: 10, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P26, Arrival Time: 31, Burst Time: 8, Remaining Time: 8, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P13, Arrival Time: 33, Burst Time: 4, Remaining Time: 4, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P7, Arrival Time: 33, Burst Time: 2, Remaining Time: 2, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P21, Arrival Time: 36, Burst Time: 4, Remaining Time: 4, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P45, Arrival Time: 40, Burst Time: 1, Remaining Time: 1, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P42, Arrival Time: 41, Burst Time: 5, Remaining Time: 5, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P11, Arrival Time: 41, Burst Time: 1, Remaining Time: 1, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P22, Arrival Time: 43, Burst Time: 10, Remaining Time: 10, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P17, Arrival Time: 46, Burst Time: 6, Remaining Time: 6, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P48, Arrival Time: 46, Burst Time: 6, Remaining Time: 6, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P20, Arrival Time: 47, Burst Time: 9, Remaining Time: 9, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P15, Arrival Time: 48, Burst Time: 3, Remaining Time: 3, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P19, Arrival Time: 48, Burst Time: 3, Remaining Time: 3, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P33, Arrival Time: 55, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P31, Arrival Time: 56, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P49, Arrival Time: 56, Burst Time: 10, Remaining Time: 10, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P30, Arrival Time: 57, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P8, Arrival Time: 59, Burst Time: 4, Remaining Time: 4, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P38, Arrival Time: 62, Burst Time: 6, Remaining Time: 6, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P0, Arrival Time: 66, Burst Time: 10, Remaining Time: 10, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P39, Arrival Time: 70, Burst Time: 8, Remaining Time: 8, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P2, Arrival Time: 71, Burst Time: 6, Remaining Time: 6, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P16, Arrival Time: 79, Burst Time: 3, Remaining Time: 3, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P43, Arrival Time: 81, Burst Time: 10, Remaining Time: 10, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P37, Arrival Time: 82, Burst Time: 7, Remaining Time: 7, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P46, Arrival Time: 82, Burst Time: 7, Remaining Time: 7, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P3, Arrival Time: 84, Burst Time: 1, Remaining Time: 1, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P47, Arrival Time: 85, Burst Time: 5, Remaining Time: 5, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P29, Arrival Time: 87, Burst Time: 1, Remaining Time: 1, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P14, Arrival Time: 90, Burst Time: 9, Remaining Time: 9, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P24, Arrival Time: 90, Burst Time: 6, Remaining Time: 6, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P5, Arrival Time: 91, Burst Time: 7, Remaining Time: 7, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P4, Arrival Time: 95, Burst Time: 9, Remaining Time: 9, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P9, Arrival Time: 95, Burst Time: 8, Remaining Time: 8, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P25, Arrival Time: 98, Burst Time: 4, Remaining Time: 4, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P40, Arrival Time: 99, Burst Time: 8, Remaining Time: 8, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+
+******************
+Time chart:
+P32 P32 P32 P32 P32 P32 P32 P32 P32 P32 P10 P10 P34 P34 P34 P34 P18 P1 P18 P1 P23 P18 P35 P1 P6 P18 P35 P36 P6 P44 P18 P27 P41 P12 P35 P36 P28 P6 P26 P44 P18 P13 P7 P27 P41 P12 P21 P35 P36 P28 P6 P45 P26 P42 P11 P44 P22 P13 P7 P27 P17 P48 P41 P20 P12 P15 P19 P21 P35 P36 P28 P26 P33 P42 P31 P49 P30 P44 P22 P8 P13 P27 P38 P17 P48 P41 P20 P0 P12 P15 P19 P21 P39 P35 P2 P36 P28 P26 
+
+******************
+Simulated processes AFTER execution:
+Name: P32, Arrival Time: 0, Burst Time: 10, Remaining Time: 0, Priority: 4, Start Time: 0, Completion Time: 10, Completed: true
+Name: P10, Arrival Time: 10, Burst Time: 2, Remaining Time: 0, Priority: 3, Start Time: 10, Completion Time: 12, Completed: true
+Name: P34, Arrival Time: 12, Burst Time: 4, Remaining Time: 0, Priority: 4, Start Time: 12, Completion Time: 16, Completed: true
+Name: P18, Arrival Time: 17, Burst Time: 6, Remaining Time: 0, Priority: 1, Start Time: 17, Completion Time: 42, Completed: true
+Name: P1, Arrival Time: 17, Burst Time: 3, Remaining Time: 0, Priority: 4, Start Time: 18, Completion Time: 25, Completed: true
+Name: P23, Arrival Time: 20, Burst Time: 1, Remaining Time: 0, Priority: 3, Start Time: 21, Completion Time: 22, Completed: true
+Name: P35, Arrival Time: 21, Burst Time: 8, Remaining Time: 2, Priority: 1, Start Time: 23, Completion Time: -1, Completed: false
+Name: P6, Arrival Time: 22, Burst Time: 4, Remaining Time: 0, Priority: 3, Start Time: 25, Completion Time: 52, Completed: true
+Name: P36, Arrival Time: 25, Burst Time: 5, Remaining Time: 0, Priority: 1, Start Time: 28, Completion Time: 97, Completed: true
+Name: P44, Arrival Time: 27, Burst Time: 7, Remaining Time: 3, Priority: 2, Start Time: 30, Completion Time: -1, Completed: false
+Name: P27, Arrival Time: 28, Burst Time: 10, Remaining Time: 6, Priority: 2, Start Time: 32, Completion Time: -1, Completed: false
+Name: P41, Arrival Time: 28, Burst Time: 4, Remaining Time: 0, Priority: 4, Start Time: 33, Completion Time: 87, Completed: true
+Name: P12, Arrival Time: 28, Burst Time: 10, Remaining Time: 6, Priority: 1, Start Time: 34, Completion Time: -1, Completed: false
+Name: P28, Arrival Time: 30, Burst Time: 10, Remaining Time: 6, Priority: 2, Start Time: 37, Completion Time: -1, Completed: false
+Name: P26, Arrival Time: 31, Burst Time: 8, Remaining Time: 4, Priority: 2, Start Time: 39, Completion Time: -1, Completed: false
+Name: P13, Arrival Time: 33, Burst Time: 4, Remaining Time: 1, Priority: 2, Start Time: 42, Completion Time: -1, Completed: false
+Name: P7, Arrival Time: 33, Burst Time: 2, Remaining Time: 0, Priority: 2, Start Time: 43, Completion Time: 60, Completed: true
+Name: P21, Arrival Time: 36, Burst Time: 4, Remaining Time: 1, Priority: 2, Start Time: 47, Completion Time: -1, Completed: false
+Name: P45, Arrival Time: 40, Burst Time: 1, Remaining Time: 0, Priority: 3, Start Time: 52, Completion Time: 53, Completed: true
+Name: P42, Arrival Time: 41, Burst Time: 5, Remaining Time: 3, Priority: 3, Start Time: 54, Completion Time: -1, Completed: false
+Name: P11, Arrival Time: 41, Burst Time: 1, Remaining Time: 0, Priority: 4, Start Time: 55, Completion Time: 56, Completed: true
+Name: P22, Arrival Time: 43, Burst Time: 10, Remaining Time: 8, Priority: 2, Start Time: 57, Completion Time: -1, Completed: false
+Name: P17, Arrival Time: 46, Burst Time: 6, Remaining Time: 4, Priority: 3, Start Time: 61, Completion Time: -1, Completed: false
+Name: P48, Arrival Time: 46, Burst Time: 6, Remaining Time: 4, Priority: 2, Start Time: 62, Completion Time: -1, Completed: false
+Name: P20, Arrival Time: 47, Burst Time: 9, Remaining Time: 7, Priority: 1, Start Time: 64, Completion Time: -1, Completed: false
+Name: P15, Arrival Time: 48, Burst Time: 3, Remaining Time: 1, Priority: 3, Start Time: 66, Completion Time: -1, Completed: false
+Name: P19, Arrival Time: 48, Burst Time: 3, Remaining Time: 1, Priority: 3, Start Time: 67, Completion Time: -1, Completed: false
+Name: P33, Arrival Time: 55, Burst Time: 6, Remaining Time: 5, Priority: 1, Start Time: 73, Completion Time: -1, Completed: false
+Name: P31, Arrival Time: 56, Burst Time: 6, Remaining Time: 5, Priority: 1, Start Time: 75, Completion Time: -1, Completed: false
+Name: P49, Arrival Time: 56, Burst Time: 10, Remaining Time: 9, Priority: 3, Start Time: 76, Completion Time: -1, Completed: false
+Name: P30, Arrival Time: 57, Burst Time: 6, Remaining Time: 5, Priority: 1, Start Time: 77, Completion Time: -1, Completed: false
+Name: P8, Arrival Time: 59, Burst Time: 4, Remaining Time: 3, Priority: 1, Start Time: 80, Completion Time: -1, Completed: false
+Name: P38, Arrival Time: 62, Burst Time: 6, Remaining Time: 5, Priority: 2, Start Time: 83, Completion Time: -1, Completed: false
+Name: P0, Arrival Time: 66, Burst Time: 10, Remaining Time: 9, Priority: 4, Start Time: 88, Completion Time: -1, Completed: false
+Name: P39, Arrival Time: 70, Burst Time: 8, Remaining Time: 7, Priority: 2, Start Time: 93, Completion Time: -1, Completed: false
+Name: P2, Arrival Time: 71, Burst Time: 6, Remaining Time: 5, Priority: 3, Start Time: 95, Completion Time: -1, Completed: false
+Name: P16, Arrival Time: 79, Burst Time: 3, Remaining Time: 3, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P43, Arrival Time: 81, Burst Time: 10, Remaining Time: 10, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P37, Arrival Time: 82, Burst Time: 7, Remaining Time: 7, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P46, Arrival Time: 82, Burst Time: 7, Remaining Time: 7, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P3, Arrival Time: 84, Burst Time: 1, Remaining Time: 1, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P47, Arrival Time: 85, Burst Time: 5, Remaining Time: 5, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P29, Arrival Time: 87, Burst Time: 1, Remaining Time: 1, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P14, Arrival Time: 90, Burst Time: 9, Remaining Time: 9, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P24, Arrival Time: 90, Burst Time: 6, Remaining Time: 6, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P5, Arrival Time: 91, Burst Time: 7, Remaining Time: 7, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P4, Arrival Time: 95, Burst Time: 9, Remaining Time: 9, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P9, Arrival Time: 95, Burst Time: 8, Remaining Time: 8, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P25, Arrival Time: 98, Burst Time: 4, Remaining Time: 4, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P40, Arrival Time: 99, Burst Time: 8, Remaining Time: 8, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+
+=== Simulation Statistics ===
+Average Turnaround Time : 22.25
+Average Waiting Time    : 18.67
+Average Response Time   : 4.08
+Throughput              : 0.12 processes/unit time
+==============================
+HPF (non-preemptive)
+******************
+Simulated processes BEFORE execution:
+Name: P32, Arrival Time: 0, Burst Time: 10, Remaining Time: 10, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P10, Arrival Time: 10, Burst Time: 2, Remaining Time: 2, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P34, Arrival Time: 12, Burst Time: 4, Remaining Time: 4, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P18, Arrival Time: 17, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P1, Arrival Time: 17, Burst Time: 3, Remaining Time: 3, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P23, Arrival Time: 20, Burst Time: 1, Remaining Time: 1, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P35, Arrival Time: 21, Burst Time: 8, Remaining Time: 8, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P6, Arrival Time: 22, Burst Time: 4, Remaining Time: 4, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P36, Arrival Time: 25, Burst Time: 5, Remaining Time: 5, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P44, Arrival Time: 27, Burst Time: 7, Remaining Time: 7, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P12, Arrival Time: 28, Burst Time: 10, Remaining Time: 10, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P27, Arrival Time: 28, Burst Time: 10, Remaining Time: 10, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P41, Arrival Time: 28, Burst Time: 4, Remaining Time: 4, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P28, Arrival Time: 30, Burst Time: 10, Remaining Time: 10, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P26, Arrival Time: 31, Burst Time: 8, Remaining Time: 8, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P13, Arrival Time: 33, Burst Time: 4, Remaining Time: 4, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P7, Arrival Time: 33, Burst Time: 2, Remaining Time: 2, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P21, Arrival Time: 36, Burst Time: 4, Remaining Time: 4, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P45, Arrival Time: 40, Burst Time: 1, Remaining Time: 1, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P42, Arrival Time: 41, Burst Time: 5, Remaining Time: 5, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P11, Arrival Time: 41, Burst Time: 1, Remaining Time: 1, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P22, Arrival Time: 43, Burst Time: 10, Remaining Time: 10, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P17, Arrival Time: 46, Burst Time: 6, Remaining Time: 6, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P48, Arrival Time: 46, Burst Time: 6, Remaining Time: 6, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P20, Arrival Time: 47, Burst Time: 9, Remaining Time: 9, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P15, Arrival Time: 48, Burst Time: 3, Remaining Time: 3, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P19, Arrival Time: 48, Burst Time: 3, Remaining Time: 3, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P33, Arrival Time: 55, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P31, Arrival Time: 56, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P49, Arrival Time: 56, Burst Time: 10, Remaining Time: 10, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P30, Arrival Time: 57, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P8, Arrival Time: 59, Burst Time: 4, Remaining Time: 4, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P38, Arrival Time: 62, Burst Time: 6, Remaining Time: 6, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P0, Arrival Time: 66, Burst Time: 10, Remaining Time: 10, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P39, Arrival Time: 70, Burst Time: 8, Remaining Time: 8, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P2, Arrival Time: 71, Burst Time: 6, Remaining Time: 6, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P16, Arrival Time: 79, Burst Time: 3, Remaining Time: 3, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P43, Arrival Time: 81, Burst Time: 10, Remaining Time: 10, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P37, Arrival Time: 82, Burst Time: 7, Remaining Time: 7, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P46, Arrival Time: 82, Burst Time: 7, Remaining Time: 7, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P3, Arrival Time: 84, Burst Time: 1, Remaining Time: 1, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P47, Arrival Time: 85, Burst Time: 5, Remaining Time: 5, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P29, Arrival Time: 87, Burst Time: 1, Remaining Time: 1, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P14, Arrival Time: 90, Burst Time: 9, Remaining Time: 9, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P24, Arrival Time: 90, Burst Time: 6, Remaining Time: 6, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P5, Arrival Time: 91, Burst Time: 7, Remaining Time: 7, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P4, Arrival Time: 95, Burst Time: 9, Remaining Time: 9, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P9, Arrival Time: 95, Burst Time: 8, Remaining Time: 8, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P25, Arrival Time: 98, Burst Time: 4, Remaining Time: 4, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P40, Arrival Time: 99, Burst Time: 8, Remaining Time: 8, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+
+******************
+Time chart:
+P32 P10 P34 P18 P35 P36 P12 P44 P20 P27 P28 P26 P13 P23 P6 
+******************
+Simulated processes AFTER execution:
+Name: P32, Arrival Time: 0, Burst Time: 10, Remaining Time: 0, Priority: 4, Start Time: 0, Completion Time: 10, Completed: true
+Name: P10, Arrival Time: 10, Burst Time: 2, Remaining Time: 0, Priority: 3, Start Time: 10, Completion Time: 12, Completed: true
+Name: P34, Arrival Time: 12, Burst Time: 4, Remaining Time: 0, Priority: 4, Start Time: 12, Completion Time: 16, Completed: true
+Name: P18, Arrival Time: 17, Burst Time: 6, Remaining Time: 0, Priority: 1, Start Time: 17, Completion Time: 23, Completed: true
+Name: P1, Arrival Time: 17, Burst Time: 3, Remaining Time: 3, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P23, Arrival Time: 20, Burst Time: 1, Remaining Time: 0, Priority: 1, Start Time: 94, Completion Time: 95, Completed: true
+Name: P35, Arrival Time: 21, Burst Time: 8, Remaining Time: 0, Priority: 1, Start Time: 23, Completion Time: 31, Completed: true
+Name: P6, Arrival Time: 22, Burst Time: 4, Remaining Time: 0, Priority: 1, Start Time: 95, Completion Time: 99, Completed: true
+Name: P36, Arrival Time: 25, Burst Time: 5, Remaining Time: 0, Priority: 1, Start Time: 31, Completion Time: 36, Completed: true
+Name: P44, Arrival Time: 27, Burst Time: 7, Remaining Time: 0, Priority: 2, Start Time: 46, Completion Time: 53, Completed: true
+Name: P12, Arrival Time: 28, Burst Time: 10, Remaining Time: 0, Priority: 1, Start Time: 36, Completion Time: 46, Completed: true
+Name: P27, Arrival Time: 28, Burst Time: 10, Remaining Time: 0, Priority: 1, Start Time: 62, Completion Time: 72, Completed: true
+Name: P41, Arrival Time: 28, Burst Time: 4, Remaining Time: 4, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P28, Arrival Time: 30, Burst Time: 10, Remaining Time: 0, Priority: 1, Start Time: 72, Completion Time: 82, Completed: true
+Name: P26, Arrival Time: 31, Burst Time: 8, Remaining Time: 0, Priority: 1, Start Time: 82, Completion Time: 90, Completed: true
+Name: P13, Arrival Time: 33, Burst Time: 4, Remaining Time: 0, Priority: 1, Start Time: 90, Completion Time: 94, Completed: true
+Name: P7, Arrival Time: 33, Burst Time: 2, Remaining Time: 2, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P21, Arrival Time: 36, Burst Time: 4, Remaining Time: 4, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P45, Arrival Time: 40, Burst Time: 1, Remaining Time: 1, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P42, Arrival Time: 41, Burst Time: 5, Remaining Time: 5, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P11, Arrival Time: 41, Burst Time: 1, Remaining Time: 1, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P22, Arrival Time: 43, Burst Time: 10, Remaining Time: 10, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P17, Arrival Time: 46, Burst Time: 6, Remaining Time: 6, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P48, Arrival Time: 46, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P20, Arrival Time: 47, Burst Time: 9, Remaining Time: 0, Priority: 1, Start Time: 53, Completion Time: 62, Completed: true
+Name: P15, Arrival Time: 48, Burst Time: 3, Remaining Time: 3, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P19, Arrival Time: 48, Burst Time: 3, Remaining Time: 3, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P33, Arrival Time: 55, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P31, Arrival Time: 56, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P49, Arrival Time: 56, Burst Time: 10, Remaining Time: 10, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P30, Arrival Time: 57, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P8, Arrival Time: 59, Burst Time: 4, Remaining Time: 4, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P38, Arrival Time: 62, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P0, Arrival Time: 66, Burst Time: 10, Remaining Time: 10, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P39, Arrival Time: 70, Burst Time: 8, Remaining Time: 8, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P2, Arrival Time: 71, Burst Time: 6, Remaining Time: 6, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P16, Arrival Time: 79, Burst Time: 3, Remaining Time: 3, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P43, Arrival Time: 81, Burst Time: 10, Remaining Time: 10, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P37, Arrival Time: 82, Burst Time: 7, Remaining Time: 7, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P46, Arrival Time: 82, Burst Time: 7, Remaining Time: 7, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P3, Arrival Time: 84, Burst Time: 1, Remaining Time: 1, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P47, Arrival Time: 85, Burst Time: 5, Remaining Time: 5, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P29, Arrival Time: 87, Burst Time: 1, Remaining Time: 1, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P14, Arrival Time: 90, Burst Time: 9, Remaining Time: 9, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P24, Arrival Time: 90, Burst Time: 6, Remaining Time: 6, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P5, Arrival Time: 91, Burst Time: 7, Remaining Time: 7, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P4, Arrival Time: 95, Burst Time: 9, Remaining Time: 9, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P9, Arrival Time: 95, Burst Time: 8, Remaining Time: 8, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P25, Arrival Time: 98, Burst Time: 4, Remaining Time: 4, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P40, Arrival Time: 99, Burst Time: 8, Remaining Time: 8, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+
+--- HPF Statistics ---
+
+Priority 1:
+  Average Turnaround Time: 12.00
+  Average Waiting Time   : 4.40
+  Average Response Time  : 4.40
+  Throughput             : 0.05 processes/unit time
+
+Priority 2:
+  Average Turnaround Time: 48.40
+  Average Waiting Time   : 40.60
+  Average Response Time  : 40.60
+  Throughput             : 0.05 processes/unit time
+
+Priority 3:
+  Average Turnaround Time: 51.33
+  Average Waiting Time   : 49.00
+  Average Response Time  : 49.00
+  Throughput             : 0.03 processes/unit time
+
+Priority 4:
+  Average Turnaround Time: 7.00
+  Average Waiting Time   : 0.00
+  Average Response Time  : 0.00
+  Throughput             : 0.02 processes/unit time
+
+Overall:
+  Average Turnaround Time: 31.33
+  Average Waiting Time   : 24.80
+  Average Response Time  : 24.80
+  Throughput             : 0.15 processes/unit time
+==============================
+HPF (preemptive)
+******************
+Simulated processes BEFORE execution:
+Name: P32, Arrival Time: 0, Burst Time: 10, Remaining Time: 10, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P10, Arrival Time: 10, Burst Time: 2, Remaining Time: 2, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P34, Arrival Time: 12, Burst Time: 4, Remaining Time: 4, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P18, Arrival Time: 17, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P1, Arrival Time: 17, Burst Time: 3, Remaining Time: 3, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P23, Arrival Time: 20, Burst Time: 1, Remaining Time: 1, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P35, Arrival Time: 21, Burst Time: 8, Remaining Time: 8, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P6, Arrival Time: 22, Burst Time: 4, Remaining Time: 4, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P36, Arrival Time: 25, Burst Time: 5, Remaining Time: 5, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P44, Arrival Time: 27, Burst Time: 7, Remaining Time: 7, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P41, Arrival Time: 28, Burst Time: 4, Remaining Time: 4, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P12, Arrival Time: 28, Burst Time: 10, Remaining Time: 10, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P27, Arrival Time: 28, Burst Time: 10, Remaining Time: 10, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P28, Arrival Time: 30, Burst Time: 10, Remaining Time: 10, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P26, Arrival Time: 31, Burst Time: 8, Remaining Time: 8, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P13, Arrival Time: 33, Burst Time: 4, Remaining Time: 4, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P7, Arrival Time: 33, Burst Time: 2, Remaining Time: 2, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P21, Arrival Time: 36, Burst Time: 4, Remaining Time: 4, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P45, Arrival Time: 40, Burst Time: 1, Remaining Time: 1, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P42, Arrival Time: 41, Burst Time: 5, Remaining Time: 5, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P11, Arrival Time: 41, Burst Time: 1, Remaining Time: 1, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P22, Arrival Time: 43, Burst Time: 10, Remaining Time: 10, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P17, Arrival Time: 46, Burst Time: 6, Remaining Time: 6, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P48, Arrival Time: 46, Burst Time: 6, Remaining Time: 6, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P20, Arrival Time: 47, Burst Time: 9, Remaining Time: 9, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P15, Arrival Time: 48, Burst Time: 3, Remaining Time: 3, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P19, Arrival Time: 48, Burst Time: 3, Remaining Time: 3, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P33, Arrival Time: 55, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P31, Arrival Time: 56, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P49, Arrival Time: 56, Burst Time: 10, Remaining Time: 10, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P30, Arrival Time: 57, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P8, Arrival Time: 59, Burst Time: 4, Remaining Time: 4, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P38, Arrival Time: 62, Burst Time: 6, Remaining Time: 6, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P0, Arrival Time: 66, Burst Time: 10, Remaining Time: 10, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P39, Arrival Time: 70, Burst Time: 8, Remaining Time: 8, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P2, Arrival Time: 71, Burst Time: 6, Remaining Time: 6, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P16, Arrival Time: 79, Burst Time: 3, Remaining Time: 3, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P43, Arrival Time: 81, Burst Time: 10, Remaining Time: 10, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P37, Arrival Time: 82, Burst Time: 7, Remaining Time: 7, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P46, Arrival Time: 82, Burst Time: 7, Remaining Time: 7, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P3, Arrival Time: 84, Burst Time: 1, Remaining Time: 1, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P47, Arrival Time: 85, Burst Time: 5, Remaining Time: 5, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P29, Arrival Time: 87, Burst Time: 1, Remaining Time: 1, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P14, Arrival Time: 90, Burst Time: 9, Remaining Time: 9, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P24, Arrival Time: 90, Burst Time: 6, Remaining Time: 6, Priority: 4, Start Time: -1, Completion Time: -1, Completed: false
+Name: P5, Arrival Time: 91, Burst Time: 7, Remaining Time: 7, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P4, Arrival Time: 95, Burst Time: 9, Remaining Time: 9, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P9, Arrival Time: 95, Burst Time: 8, Remaining Time: 8, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P25, Arrival Time: 98, Burst Time: 4, Remaining Time: 4, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P40, Arrival Time: 99, Burst Time: 8, Remaining Time: 8, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+
+******************
+Time chart:
+P32 P32 P32 P32 P32 P32 P32 P32 P32 P32 P10 P10 P34 P34 P34 P34 P18 P18 P18 P18 P18 P18 P35 P35 P35 P35 P35 P35 P23 P35 P1 P1 P1 P35 P6 P6 P6 P6 P36 P36 P36 P36 P36 P44 P44 P44 P44 P44 P44 P44 P41 P41 P41 P41 P12 P12 P12 P12 P12 P12 P12 P12 P12 P12 P27 P27 P27 P27 P27 P27 P27 P27 P27 P27 P28 P28 P28 P28 P28 P28 P28 P28 P28 P28 P26 P26 P26 P26 P26 P26 P26 P26 P13 P13 P13 P13 P7 P7 
+******************
+Simulated processes AFTER execution:
+Name: P32, Arrival Time: 0, Burst Time: 10, Remaining Time: 0, Priority: 4, Start Time: 0, Completion Time: 10, Completed: true
+Name: P10, Arrival Time: 10, Burst Time: 2, Remaining Time: 0, Priority: 3, Start Time: 10, Completion Time: 12, Completed: true
+Name: P34, Arrival Time: 12, Burst Time: 4, Remaining Time: 0, Priority: 4, Start Time: 12, Completion Time: 16, Completed: true
+Name: P18, Arrival Time: 17, Burst Time: 6, Remaining Time: 0, Priority: 1, Start Time: 17, Completion Time: 23, Completed: true
+Name: P1, Arrival Time: 17, Burst Time: 3, Remaining Time: 0, Priority: 1, Start Time: 31, Completion Time: 34, Completed: true
+Name: P23, Arrival Time: 20, Burst Time: 1, Remaining Time: 0, Priority: 1, Start Time: 29, Completion Time: 30, Completed: true
+Name: P35, Arrival Time: 21, Burst Time: 8, Remaining Time: 0, Priority: 1, Start Time: 23, Completion Time: 35, Completed: true
+Name: P6, Arrival Time: 22, Burst Time: 4, Remaining Time: 0, Priority: 1, Start Time: 35, Completion Time: 39, Completed: true
+Name: P36, Arrival Time: 25, Burst Time: 5, Remaining Time: 0, Priority: 1, Start Time: 39, Completion Time: 44, Completed: true
+Name: P44, Arrival Time: 27, Burst Time: 7, Remaining Time: 0, Priority: 1, Start Time: 44, Completion Time: 51, Completed: true
+Name: P41, Arrival Time: 28, Burst Time: 4, Remaining Time: 0, Priority: 1, Start Time: 51, Completion Time: 55, Completed: true
+Name: P12, Arrival Time: 28, Burst Time: 10, Remaining Time: 0, Priority: 1, Start Time: 55, Completion Time: 65, Completed: true
+Name: P27, Arrival Time: 28, Burst Time: 10, Remaining Time: 0, Priority: 1, Start Time: 65, Completion Time: 75, Completed: true
+Name: P28, Arrival Time: 30, Burst Time: 10, Remaining Time: 0, Priority: 1, Start Time: 75, Completion Time: 85, Completed: true
+Name: P26, Arrival Time: 31, Burst Time: 8, Remaining Time: 0, Priority: 1, Start Time: 85, Completion Time: 93, Completed: true
+Name: P13, Arrival Time: 33, Burst Time: 4, Remaining Time: 0, Priority: 1, Start Time: 93, Completion Time: 97, Completed: true
+Name: P7, Arrival Time: 33, Burst Time: 2, Remaining Time: 0, Priority: 1, Start Time: 97, Completion Time: 99, Completed: true
+Name: P21, Arrival Time: 36, Burst Time: 4, Remaining Time: 4, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P45, Arrival Time: 40, Burst Time: 1, Remaining Time: 1, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P42, Arrival Time: 41, Burst Time: 5, Remaining Time: 5, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P11, Arrival Time: 41, Burst Time: 1, Remaining Time: 1, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P22, Arrival Time: 43, Burst Time: 10, Remaining Time: 10, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P17, Arrival Time: 46, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P48, Arrival Time: 46, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P20, Arrival Time: 47, Burst Time: 9, Remaining Time: 9, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P15, Arrival Time: 48, Burst Time: 3, Remaining Time: 3, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P19, Arrival Time: 48, Burst Time: 3, Remaining Time: 3, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P33, Arrival Time: 55, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P31, Arrival Time: 56, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P49, Arrival Time: 56, Burst Time: 10, Remaining Time: 10, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P30, Arrival Time: 57, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P8, Arrival Time: 59, Burst Time: 4, Remaining Time: 4, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P38, Arrival Time: 62, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P0, Arrival Time: 66, Burst Time: 10, Remaining Time: 10, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P39, Arrival Time: 70, Burst Time: 8, Remaining Time: 8, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P2, Arrival Time: 71, Burst Time: 6, Remaining Time: 6, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P16, Arrival Time: 79, Burst Time: 3, Remaining Time: 3, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P43, Arrival Time: 81, Burst Time: 10, Remaining Time: 10, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P37, Arrival Time: 82, Burst Time: 7, Remaining Time: 7, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P46, Arrival Time: 82, Burst Time: 7, Remaining Time: 7, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P3, Arrival Time: 84, Burst Time: 1, Remaining Time: 1, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P47, Arrival Time: 85, Burst Time: 5, Remaining Time: 5, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P29, Arrival Time: 87, Burst Time: 1, Remaining Time: 1, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+Name: P14, Arrival Time: 90, Burst Time: 9, Remaining Time: 9, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P24, Arrival Time: 90, Burst Time: 6, Remaining Time: 6, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P5, Arrival Time: 91, Burst Time: 7, Remaining Time: 7, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P4, Arrival Time: 95, Burst Time: 9, Remaining Time: 9, Priority: 3, Start Time: -1, Completion Time: -1, Completed: false
+Name: P9, Arrival Time: 95, Burst Time: 8, Remaining Time: 8, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P25, Arrival Time: 98, Burst Time: 4, Remaining Time: 4, Priority: 1, Start Time: -1, Completion Time: -1, Completed: false
+Name: P40, Arrival Time: 99, Burst Time: 8, Remaining Time: 8, Priority: 2, Start Time: -1, Completion Time: -1, Completed: false
+
+--- HPF Statistics ---
+
+Priority 1:
+  Average Turnaround Time: 19.00
+  Average Waiting Time   : 11.75
+  Average Response Time  : 10.75
+  Throughput             : 0.04 processes/unit time
+
+Priority 2:
+  Average Turnaround Time: 53.00
+  Average Waiting Time   : 46.17
+  Average Response Time  : 46.17
+  Throughput             : 0.06 processes/unit time
+
+Priority 3:
+  Average Turnaround Time: 9.67
+  Average Waiting Time   : 7.33
+  Average Response Time  : 7.33
+  Throughput             : 0.03 processes/unit time
+
+Priority 4:
+  Average Turnaround Time: 14.50
+  Average Waiting Time   : 9.25
+  Average Response Time  : 9.25
+  Throughput             : 0.04 processes/unit time
+
+Overall:
+  Average Turnaround Time: 28.29
+  Average Waiting Time   : 22.53
+  Average Response Time  : 22.29
+  Throughput             : 0.17 processes/unit time
+==============================
