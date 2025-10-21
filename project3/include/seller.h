@@ -1,44 +1,41 @@
-#ifndef SELL_H
-#define SELL_H
+#ifndef SELLER_H
+#define SELLER_H
 
 #include <pthread.h>
-#include <memory.h>
+#include <stdbool.h>
 
-#include "seatmap.h"
-#include "customer.h"
-#include "util.h"
+#define CUSTOMER_NAME_LEN 16
 
-typedef enum SellerType {
-    HIGH_SELLER = 'H',
-    MID_SELLER = 'M',
-    LOW_SELLER = 'L'
-} SellerType;
+typedef enum {
+    H,
+    M,
+    L
+} seller_type_t;
 
-typedef struct SellerArgs {
-    SellerType seller_type;
-    char seller_name[3];
-    SeatMap* seat_map;
-    Customer* customer_queue;
-    int customer_count;
+typedef struct customer {
+    int  seq;
+    int  arrival_min;
+    int  service_min;
+    char ticket_id[CUSTOMER_NAME_LEN];
+    struct customer *next;
+} customer_t;
 
-    // Random service time for seller
-    // Initialized to 0 to indicate no current service
-    int remaining_service_time;
+typedef struct {
+    char          id_prefix[4];
+    seller_type_t type;
+    char          type_char;
+    int           seller_index;
+    customer_t   *q_head;
+    int           served_count;
+    long          sum_response;
+    long          sum_turnaround;
+} seller_args_t;
 
-    pthread_mutex_t* time_mtx;
-    pthread_cond_t* time_cond;
-    pthread_cond_t* wait_cond;
+void *sell(void *arg);
 
-    int* current_time;
-    int* finished_seller_count;
-    bool* time_out;
-    int* active_seller_count;
-} SellerArgs;
+void create_seller_threads(int N, pthread_t out_threads[10], seller_args_t out_args[10]);
+customer_t *generate_customer_queue(const char *id_prefix, seller_type_t type, int N);
+void wakeup_all_seller_threads(void);
+void notify_sellers_of_time_change(void);
 
-void initialize_seller(SellerArgs* args, SellerType type, SeatMap* seat_map, int customer_count,
-                       pthread_mutex_t* time_mtx, pthread_cond_t* time_cond, pthread_cond_t* wait_cond,
-                       int* current_time, int* finished_seller_count,  bool* time_out, int* active_seller_count);
-
-void* sell(void* seller_args);
-
-#endif // SELL_H
+#endif
