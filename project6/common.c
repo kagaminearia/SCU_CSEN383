@@ -18,6 +18,11 @@ void get_elapsed_time(char *time_str) {
         usec += 1000000;
     }
     
-    double msec = (double)(usec / 1000.0);
-    sprintf(time_str, "%ld:%06.3f", sec, msec);
+    // Format as M:SS.mmm (minutes:seconds.milliseconds)
+    int total_ms = (sec * 1000) + (usec / 1000);
+    int minutes = total_ms / 60000;
+    int seconds = (total_ms % 60000) / 1000;
+    int milliseconds = total_ms % 1000;
+    
+    sprintf(time_str, "%d:%02d.%03d", minutes, seconds, milliseconds);
 }
